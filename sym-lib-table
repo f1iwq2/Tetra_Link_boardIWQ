@@ -1,0 +1,4 @@
+(sym_lib_table
+  (lib (name interface_MTM800E-rescue)(type Legacy)(uri ${KIPRJMOD}/interface_MTM800E-rescue.lib)(options "")(descr ""))
+  (lib (name interface_MTM800E_V2-rescue)(type Legacy)(uri ${KIPRJMOD}/interface_MTM800E_V2-rescue.lib)(options "")(descr ""))
+)
