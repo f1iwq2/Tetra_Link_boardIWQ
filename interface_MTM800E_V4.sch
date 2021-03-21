@@ -4,7 +4,7 @@ EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
 Sheet 1 2
-Title "Interface Raspberry V4 - MTM800(E) MTM5400 pour SVXLink"
+Title "Interface Raspberry V4 - MTM800(E) MTM5x00 pour SVXLink"
 Date "20/03/2021"
 Rev "4"
 Comp "F1IWQ"
@@ -93,51 +93,51 @@ SWB+
 $Comp
 L Device:R R4
 U 1 1 5EED3C60
-P 9750 5150
-F 0 "R4" V 9543 5150 50  0000 C CNN
-F 1 "1,2k" V 9634 5150 50  0000 C CNN
-F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal" V 9680 5150 50  0001 C CNN
-F 3 "~" H 9750 5150 50  0001 C CNN
-	1    9750 5150
+P 9750 4400
+F 0 "R4" V 9543 4400 50  0000 C CNN
+F 1 "1,2k" V 9634 4400 50  0000 C CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal" V 9680 4400 50  0001 C CNN
+F 3 "~" H 9750 4400 50  0001 C CNN
+	1    9750 4400
 	0    1    1    0   
 $EndComp
 $Comp
 L Device:LED D1
 U 1 1 5EED4439
-P 10100 5150
-F 0 "D1" H 10100 5050 50  0000 C CNN
-F 1 "LED" H 9800 5150 50  0000 C CNN
-F 2 "LED_THT:LED_D3.0mm" H 10100 5150 50  0001 C CNN
-F 3 "~" H 10100 5150 50  0001 C CNN
-	1    10100 5150
+P 10100 4400
+F 0 "D1" H 10100 4300 50  0000 C CNN
+F 1 "LED" H 9800 4400 50  0000 C CNN
+F 2 "LED_THT:LED_D3.0mm" H 10100 4400 50  0001 C CNN
+F 3 "~" H 10100 4400 50  0001 C CNN
+	1    10100 4400
 	-1   0    0    1   
 $EndComp
 $Comp
 L power:GND #PWR04
 U 1 1 5EED4C65
-P 10300 5200
-F 0 "#PWR04" H 10300 4950 50  0001 C CNN
-F 1 "GND" H 10305 5027 50  0000 C CNN
-F 2 "" H 10300 5200 50  0001 C CNN
-F 3 "" H 10300 5200 50  0001 C CNN
-	1    10300 5200
+P 10300 4450
+F 0 "#PWR04" H 10300 4200 50  0001 C CNN
+F 1 "GND" H 10305 4277 50  0000 C CNN
+F 2 "" H 10300 4450 50  0001 C CNN
+F 3 "" H 10300 4450 50  0001 C CNN
+	1    10300 4450
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	10250 5150 10300 5150
+	10250 4400 10300 4400
 Wire Wire Line
-	10300 5150 10300 5200
+	10300 4400 10300 4450
 Wire Wire Line
-	9900 5150 9950 5150
+	9900 4400 9950 4400
 $Comp
 L power:PWR_FLAG #FLG0103
 U 1 1 5EEF8405
-P 9150 3250
-F 0 "#FLG0103" H 9150 3325 50  0001 C CNN
-F 1 "PWR_FLAG" H 9250 3400 50  0000 C CNN
-F 2 "" H 9150 3250 50  0001 C CNN
-F 3 "~" H 9150 3250 50  0001 C CNN
-	1    9150 3250
+P 9250 3600
+F 0 "#FLG0103" H 9250 3675 50  0001 C CNN
+F 1 "PWR_FLAG" H 9350 3750 50  0000 C CNN
+F 2 "" H 9250 3600 50  0001 C CNN
+F 3 "~" H 9250 3600 50  0001 C CNN
+	1    9250 3600
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -198,49 +198,10 @@ Text Label 8100 2450 1    39   ~ 0
 TXAUDIO
 Text Notes 6400 1900 0    71   ~ 0
 Connecteur MTM800E
-Text Notes 7550 2100 2    59   ~ 0
+Text Notes 9350 900  2    59   ~ 0
 Les numéros déportés sont les numéros\nde broches sur le MTM800E/5400
-$Comp
-L Transistor_BJT:BC548 Q1
-U 1 1 5EF38B5C
-P 10400 4100
-F 0 "Q1" H 10591 4146 50  0000 L CNN
-F 1 "BC548" H 10591 4055 50  0000 L CNN
-F 2 "Package_TO_SOT_THT:TO-92_Inline_Wide" H 10600 4025 50  0001 L CIN
-F 3 "http://www.fairchildsemi.com/ds/BC/BC547.pdf" H 10400 4100 50  0001 L CNN
-	1    10400 4100
-	1    0    0    -1  
-$EndComp
 Text Label 8000 2450 1    39   ~ 0
 EXT_PTT
-Wire Wire Line
-	10500 4300 10500 4400
-$Comp
-L power:GND #PWR08
-U 1 1 5EF3B0DA
-P 10500 4400
-F 0 "#PWR08" H 10500 4150 50  0001 C CNN
-F 1 "GND" H 10505 4227 50  0000 C CNN
-F 2 "" H 10500 4400 50  0001 C CNN
-F 3 "" H 10500 4400 50  0001 C CNN
-	1    10500 4400
-	1    0    0    -1  
-$EndComp
-$Comp
-L Device:R R5
-U 1 1 5EF3B43C
-P 10000 4100
-F 0 "R5" V 9793 4100 50  0000 C CNN
-F 1 "10k" V 9884 4100 50  0000 C CNN
-F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal" V 9930 4100 50  0001 C CNN
-F 3 "~" H 10000 4100 50  0001 C CNN
-	1    10000 4100
-	0    1    1    0   
-$EndComp
-Wire Wire Line
-	10150 4100 10200 4100
-Text Label 9100 4100 0    39   ~ 0
-PTT
 Wire Wire Line
 	5300 1300 5300 1200
 Text Notes 5950 850  0    71   ~ 0
@@ -263,43 +224,6 @@ Text Notes 8500 2150 1    39   ~ 0
 13
 Text Notes 7900 1500 1    39   ~ 0
 2
-$Comp
-L Device:R R6
-U 1 1 5EFD1ED3
-P 9750 4700
-F 0 "R6" V 9543 4700 50  0000 C CNN
-F 1 "330" V 9634 4700 50  0000 C CNN
-F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal" V 9680 4700 50  0001 C CNN
-F 3 "~" H 9750 4700 50  0001 C CNN
-	1    9750 4700
-	0    1    1    0   
-$EndComp
-$Comp
-L Device:LED D2
-U 1 1 5EFD2722
-P 10100 4700
-F 0 "D2" H 10100 4600 50  0000 C CNN
-F 1 "LED" H 9800 4700 50  0000 C CNN
-F 2 "LED_THT:LED_D3.0mm" H 10100 4700 50  0001 C CNN
-F 3 "~" H 10100 4700 50  0001 C CNN
-	1    10100 4700
-	-1   0    0    1   
-$EndComp
-Wire Wire Line
-	9950 4700 9900 4700
-$Comp
-L power:GND #PWR09
-U 1 1 5EFD670D
-P 10300 4750
-F 0 "#PWR09" H 10300 4500 50  0001 C CNN
-F 1 "GND" H 10300 4600 50  0000 C CNN
-F 2 "" H 10300 4750 50  0001 C CNN
-F 3 "" H 10300 4750 50  0001 C CNN
-	1    10300 4750
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	10250 4700 10300 4700
 $Comp
 L Device:R R9
 U 1 1 5EEFF679
@@ -338,8 +262,6 @@ Text Notes 7800 1550 1    39   ~ 0
 20
 Text Notes 7800 2150 1    39   ~ 0
 19
-Wire Wire Line
-	10500 3800 10500 3900
 Text Label 8700 1400 1    39   ~ 0
 SCIRTS
 Text Label 8700 2450 1    39   ~ 0
@@ -479,106 +401,95 @@ NoConn ~ 6400 6350
 $Comp
 L interface_MTM800E_V2-rescue:LD1117AV33-Regulator_Linear-interface_MTM800E-rescue U3
 U 1 1 5EEDFE35
-P 9850 5900
-F 0 "U3" H 9500 6200 50  0000 C CNN
-F 1 "LD1117AV33" H 10050 6200 50  0000 C CNN
-F 2 "Package_TO_SOT_THT:TO255P1020X450X1968-3" H 9850 5900 50  0001 L BNN
-F 3 "19.68mm" H 9850 5900 50  0001 L BNN
-F 4 "26" H 9850 5900 50  0001 L BNN "Champ4"
-F 5 "IPC-7351B" H 9850 5900 50  0001 L BNN "Champ5"
-F 6 "ST Microelectronics" H 9850 5900 50  0001 L BNN "Champ6"
-	1    9850 5900
+P 9850 5250
+F 0 "U3" H 9500 5550 50  0000 C CNN
+F 1 "LD1117AV33" H 10050 5550 50  0000 C CNN
+F 2 "Package_TO_SOT_THT:TO255P1020X450X1968-3" H 9850 5250 50  0001 L BNN
+F 3 "19.68mm" H 9850 5250 50  0001 L BNN
+F 4 "26" H 9850 5250 50  0001 L BNN "Champ4"
+F 5 "IPC-7351B" H 9850 5250 50  0001 L BNN "Champ5"
+F 6 "ST Microelectronics" H 9850 5250 50  0001 L BNN "Champ6"
+	1    9850 5250
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	8950 5950 8950 5800
-Wire Wire Line
-	10450 6000 10550 6000
+	10450 5350 10550 5350
 $Comp
 L power:GND #PWR012
 U 1 1 5EEEBC9D
-P 10800 6300
-F 0 "#PWR012" H 10800 6050 50  0001 C CNN
-F 1 "GND" H 10805 6127 50  0000 C CNN
-F 2 "" H 10800 6300 50  0001 C CNN
-F 3 "" H 10800 6300 50  0001 C CNN
-	1    10800 6300
+P 10800 5650
+F 0 "#PWR012" H 10800 5400 50  0001 C CNN
+F 1 "GND" H 10805 5477 50  0000 C CNN
+F 2 "" H 10800 5650 50  0001 C CNN
+F 3 "" H 10800 5650 50  0001 C CNN
+	1    10800 5650
 	1    0    0    -1  
 $EndComp
 $Comp
 L power:+3.3V #PWR011
 U 1 1 5EEEC713
-P 10800 5750
-F 0 "#PWR011" H 10800 5600 50  0001 C CNN
-F 1 "+3.3V" H 10815 5923 50  0000 C CNN
-F 2 "" H 10800 5750 50  0001 C CNN
-F 3 "" H 10800 5750 50  0001 C CNN
-	1    10800 5750
+P 10800 5100
+F 0 "#PWR011" H 10800 4950 50  0001 C CNN
+F 1 "+3.3V" H 10815 5273 50  0000 C CNN
+F 2 "" H 10800 5100 50  0001 C CNN
+F 3 "" H 10800 5100 50  0001 C CNN
+	1    10800 5100
 	1    0    0    -1  
 $EndComp
 $Comp
 L Device:CP C1
 U 1 1 5EEF46C8
-P 8950 6100
-F 0 "C1" H 9068 6146 50  0000 L CNN
-F 1 "10µ" H 9068 6055 50  0000 L CNN
-F 2 "Capacitor_THT:CP_Radial_D5.0mm_P2.50mm" H 8988 5950 50  0001 C CNN
-F 3 "~" H 8950 6100 50  0001 C CNN
-	1    8950 6100
+P 8950 5450
+F 0 "C1" H 9068 5496 50  0000 L CNN
+F 1 "10µ" H 9068 5405 50  0000 L CNN
+F 2 "Capacitor_THT:CP_Radial_D5.0mm_P2.50mm" H 8988 5300 50  0001 C CNN
+F 3 "~" H 8950 5450 50  0001 C CNN
+	1    8950 5450
 	1    0    0    -1  
 $EndComp
 $Comp
 L Device:CP C2
 U 1 1 5EEF490C
-P 10800 5950
-F 0 "C2" H 10918 5996 50  0000 L CNN
-F 1 "10µ" H 10918 5905 50  0000 L CNN
-F 2 "Capacitor_THT:CP_Radial_D5.0mm_P2.50mm" H 10838 5800 50  0001 C CNN
-F 3 "~" H 10800 5950 50  0001 C CNN
-	1    10800 5950
+P 10800 5300
+F 0 "C2" H 10918 5346 50  0000 L CNN
+F 1 "10µ" H 10918 5255 50  0000 L CNN
+F 2 "Capacitor_THT:CP_Radial_D5.0mm_P2.50mm" H 10838 5150 50  0001 C CNN
+F 3 "~" H 10800 5300 50  0001 C CNN
+	1    10800 5300
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	10800 5750 10800 5800
-Connection ~ 10800 5800
+	10800 5100 10800 5150
+Connection ~ 10800 5150
 Wire Wire Line
-	10550 6100 10550 6000
+	10550 5450 10550 5350
 Wire Wire Line
-	10550 6100 10800 6100
-Connection ~ 10800 6100
+	10550 5450 10800 5450
+Connection ~ 10800 5450
 $Comp
 L power:GND #PWR010
 U 1 1 5EF0D036
-P 8950 6300
-F 0 "#PWR010" H 8950 6050 50  0001 C CNN
-F 1 "GND" H 8955 6127 50  0000 C CNN
-F 2 "" H 8950 6300 50  0001 C CNN
-F 3 "" H 8950 6300 50  0001 C CNN
-	1    8950 6300
+P 8950 5650
+F 0 "#PWR010" H 8950 5400 50  0001 C CNN
+F 1 "GND" H 8955 5477 50  0000 C CNN
+F 2 "" H 8950 5650 50  0001 C CNN
+F 3 "" H 8950 5650 50  0001 C CNN
+	1    8950 5650
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	8950 6300 8950 6250
+	8950 5650 8950 5600
 NoConn ~ 2300 900 
 Wire Wire Line
-	10450 5800 10800 5800
-Text Notes 9250 6300 0    59   ~ 0
+	10450 5150 10800 5150
+Text Notes 9250 5650 0    59   ~ 0
      Alimentation 3,3V\nattention chassis à 3,3V!
 Wire Wire Line
-	9600 4700 9500 4700
-Wire Wire Line
-	9500 4700 9500 4100
-Connection ~ 9500 4100
-Wire Wire Line
-	9500 4100 9850 4100
-Wire Wire Line
 	8100 2050 8100 2650
-Wire Wire Line
-	10300 4750 10300 4700
 Text Notes 8100 1500 1    39   ~ 0
 6
-Text Notes 9500 3200 0    71   ~ 0
-Connecteur MTM5400
+Text Notes 9450 3150 0    71   ~ 0
+Connecteur MTM5x00
 Text Label 9500 2400 1    39   ~ 0
 UART1TXD
 Text Label 9600 2400 1    39   ~ 0
@@ -707,7 +618,6 @@ Text Label 10700 1450 1    39   ~ 0
 ALARM
 Text Notes 10700 1550 1    39   ~ 0
 26
-Connection ~ 8950 5150
 Wire Wire Line
 	10700 2450 11050 2450
 Wire Wire Line
@@ -768,8 +678,6 @@ NoConn ~ 1050 2600
 NoConn ~ 1050 2500
 NoConn ~ 1050 1800
 NoConn ~ 1050 1700
-Text Label 700  4350 0    39   ~ 0
-PTT
 $Comp
 L Connector_Generic:Conn_01x01 J10
 U 1 1 5EF9A5D3
@@ -918,10 +826,7 @@ Connection ~ 1150 4700
 Wire Wire Line
 	1200 4150 1150 4150
 Wire Wire Line
-	700  4350 1150 4350
-Wire Wire Line
 	1150 4150 1150 4350
-Connection ~ 1150 4350
 Wire Wire Line
 	1600 4900 1950 4900
 Text Label 1950 4900 0    39   ~ 0
@@ -1011,34 +916,8 @@ F 3 "~" H 7100 2500 50  0001 C CNN
 $EndComp
 Wire Wire Line
 	6950 2500 6550 2500
-$Comp
-L Device:R R14
-U 1 1 5F009DAA
-P 4850 1550
-F 0 "R14" H 4920 1596 50  0000 L CNN
-F 1 "100k" H 4920 1505 50  0000 L CNN
-F 2 "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P2.54mm_Vertical" V 4780 1550 50  0001 C CNN
-F 3 "~" H 4850 1550 50  0001 C CNN
-	1    4850 1550
-	1    0    0    -1  
-$EndComp
-$Comp
-L power:GND #PWR020
-U 1 1 5F00A368
-P 4850 1750
-F 0 "#PWR020" H 4850 1500 50  0001 C CNN
-F 1 "GND" H 4855 1577 50  0000 C CNN
-F 2 "" H 4850 1750 50  0001 C CNN
-F 3 "" H 4850 1750 50  0001 C CNN
-	1    4850 1750
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	4850 1750 4850 1700
-Text Notes 10050 5300 0    39   ~ 0
+Text Notes 10050 4550 0    39   ~ 0
 12V
-Text Notes 10050 4850 0    39   ~ 0
-PTT
 $Comp
 L Connector_Generic:Conn_02x13_Odd_Even J8
 U 1 1 5F01B7A2
@@ -1071,21 +950,21 @@ HP+
 $Comp
 L Connector:Screw_Terminal_01x02 J13
 U 1 1 5F1FE06D
-P 10100 3450
-F 0 "J13" H 10180 3442 50  0000 L CNN
-F 1 "Screw_Terminal_01x02" H 10180 3351 50  0000 L CNN
-F 2 "TerminalBlock:TerminalBlock_bornier-2_P5.08mm" H 10100 3450 50  0001 C CNN
-F 3 "~" H 10100 3450 50  0001 C CNN
-	1    10100 3450
+P 4000 3400
+F 0 "J13" H 4080 3392 50  0000 L CNN
+F 1 "Screw_Terminal_01x02" H 4080 3301 50  0000 L CNN
+F 2 "TerminalBlock:TerminalBlock_bornier-2_P5.08mm" H 4000 3400 50  0001 C CNN
+F 3 "~" H 4000 3400 50  0001 C CNN
+	1    4000 3400
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	9900 3550 9650 3550
+	3800 3500 3550 3500
 Wire Wire Line
-	9900 3450 9650 3450
-Text Label 9650 3450 0    39   ~ 0
+	3800 3400 3550 3400
+Text Label 3550 3400 0    39   ~ 0
 HP+
-Text Label 9650 3550 0    39   ~ 0
+Text Label 3550 3500 0    39   ~ 0
 HP-
 Wire Wire Line
 	7600 1500 7600 2650
@@ -1131,8 +1010,6 @@ HOOK_
 Wire Wire Line
 	5600 1200 5600 2700
 Wire Wire Line
-	8000 2800 8550 2800
-Wire Wire Line
 	7250 2500 7500 2500
 $Sheet
 S 3300 1550 950  450 
@@ -1144,33 +1021,19 @@ Text GLabel 6100 950  0    39   Input ~ 0
 Hp_Son
 Text GLabel 6250 2300 0    39   Input ~ 0
 Mic_Son
-Text GLabel 8850 5150 0    39   Input ~ 0
+Text GLabel 8850 4400 0    39   Input ~ 0
 12V
 NoConn ~ 6400 7050
 Wire Wire Line
 	5700 1200 5700 1450
 Wire Wire Line
-	4650 1300 4850 1300
-Wire Wire Line
-	4850 1400 4850 1300
-Connection ~ 4850 1300
-Wire Wire Line
-	4850 1300 5300 1300
-Wire Wire Line
-	9250 5800 8950 5800
-Connection ~ 8950 5800
-Wire Wire Line
-	8950 5800 8950 5150
-Text Notes 10350 3450 0    43   ~ 0
+	9250 5150 8950 5150
+Text Notes 4250 3400 0    43   ~ 0
 Bornier \nhaut-parleur MTM
 Wire Notes Line
-	9550 3300 11050 3300
+	4950 3250 4950 3600
 Wire Notes Line
-	11050 3300 11050 3650
-Wire Notes Line
-	11050 3650 9550 3650
-Wire Notes Line
-	9550 3650 9550 3300
+	3350 3600 3350 3250
 $Comp
 L Connector:DB9_Female J5
 U 1 1 5F3FD9F2
@@ -1219,23 +1082,6 @@ Wire Wire Line
 	6150 7250 5900 7250
 Wire Wire Line
 	6150 6450 6400 6450
-$Comp
-L Connector_Generic:Conn_01x02 J14
-U 1 1 5F43590B
-P 8750 3300
-F 0 "J14" H 8700 3100 50  0000 L CNN
-F 1 "Conn_01x02" H 8100 3250 50  0000 L CNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical" H 8750 3300 50  0001 C CNN
-F 3 "~" H 8750 3300 50  0001 C CNN
-	1    8750 3300
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	8550 3400 8550 3800
-Text Notes 8500 3550 2    43   ~ 0
-J14 : \nsans/avec PTT
-Wire Wire Line
-	8550 3800 10500 3800
 NoConn ~ 2900 1700
 NoConn ~ 2900 1600
 Wire Wire Line
@@ -1306,15 +1152,11 @@ Text Notes 1050 1500 2    39   ~ 0
 Text Notes 900  1250 0    39   ~ 0
 <--
 Wire Wire Line
-	9150 3250 9150 3550
+	9250 3600 9250 3900
 Text Notes 10500 1000 3    39   ~ 0
 <--
 Text Notes 10400 1000 3    39   ~ 0
 -->
-Wire Wire Line
-	9150 3550 8950 3550
-Wire Wire Line
-	8950 3550 8950 5150
 Text Notes 9450 2150 3    39   ~ 0
 <--
 Wire Wire Line
@@ -1397,18 +1239,11 @@ F 3 "http://www.vishay.com/docs/88503/1n4001.pdf" H 8950 3100 50  0001 C CNN
 	0    -1   -1   0   
 $EndComp
 Wire Wire Line
-	8950 3250 8950 3550
-Connection ~ 8950 3550
-Wire Wire Line
 	8200 2050 8200 3000
 Wire Wire Line
 	8400 2050 8400 2900
 Wire Wire Line
 	7500 2500 7500 2900
-Wire Wire Line
-	8550 2800 8550 3300
-Wire Wire Line
-	8000 2050 8000 2800
 Wire Wire Line
 	8500 2050 8500 2750
 Text Notes 4150 6850 0    39   ~ 0
@@ -1480,9 +1315,9 @@ F 3 "" H 8000 1100 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	8950 5150 9600 5150
+	8950 4400 9600 4400
 Wire Wire Line
-	8850 5150 8950 5150
+	8850 4400 8950 4400
 Wire Wire Line
 	2100 6350 2250 6350
 Wire Wire Line
@@ -1496,39 +1331,8 @@ Wire Wire Line
 	2250 4950 3450 4950
 Wire Wire Line
 	7900 2050 7900 2450
-$Comp
-L Device:R R15
-U 1 1 5F489A38
-P 9250 4450
-F 0 "R15" H 9150 4600 50  0000 C CNN
-F 1 "100k" H 9150 4300 50  0000 C CNN
-F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal" V 9180 4450 50  0001 C CNN
-F 3 "~" H 9250 4450 50  0001 C CNN
-	1    9250 4450
-	-1   0    0    1   
-$EndComp
-$Comp
-L power:GND #PWR031
-U 1 1 5F48A039
-P 9250 4750
-F 0 "#PWR031" H 9250 4500 50  0001 C CNN
-F 1 "GND" H 9250 4600 50  0000 C CNN
-F 2 "" H 9250 4750 50  0001 C CNN
-F 3 "" H 9250 4750 50  0001 C CNN
-	1    9250 4750
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
-	9250 4750 9250 4600
-Wire Wire Line
-	9250 4300 9250 4100
-Connection ~ 9250 4100
-Wire Wire Line
-	9250 4100 9500 4100
-Wire Wire Line
-	9100 4100 9250 4100
-Wire Wire Line
-	10800 6100 10800 6300
+	10800 5450 10800 5650
 Wire Wire Line
 	9800 600  9900 600 
 Connection ~ 9900 600 
@@ -1601,56 +1405,45 @@ Wire Wire Line
 Wire Wire Line
 	8200 1050 8200 1550
 Wire Notes Line
-	3250 3900 3250 3250
+	3350 4400 3350 3750
 Wire Notes Line
-	4850 3900 3250 3900
+	4950 4400 3350 4400
 Wire Notes Line
-	4850 3250 4850 3900
+	4950 3750 4950 4400
 Wire Notes Line
-	3250 3250 4850 3250
-Text Notes 3700 3450 0    47   ~ 0
+	3350 3750 4950 3750
+Text Notes 3800 3950 0    47   ~ 0
    Mise sous tension \nMTM par ignition (12V)
 Wire Wire Line
-	4150 3750 4300 3750
+	4250 4250 4400 4250
 $Comp
 L Connector_Generic:Conn_01x01 J16
 U 1 1 5F7325E5
-P 4500 3750
-F 0 "J16" H 4600 3750 50  0000 L CNN
-F 1 "Conn_01x01" H 4350 3900 50  0000 L CNN
-F 2 "TestPoint:TestPoint_Loop_D2.50mm_Drill1.0mm" H 4500 3750 50  0001 C CNN
-F 3 "~" H 4500 3750 50  0001 C CNN
-	1    4500 3750
+P 4600 4250
+F 0 "J16" H 4700 4250 50  0000 L CNN
+F 1 "Conn_01x01" H 4450 4400 50  0000 L CNN
+F 2 "TestPoint:TestPoint_Loop_D2.50mm_Drill1.0mm" H 4600 4250 50  0001 C CNN
+F 3 "~" H 4600 4250 50  0001 C CNN
+	1    4600 4250
 	1    0    0    -1  
 $EndComp
 $Comp
 L Device:R R18
 U 1 1 5F73170F
-P 4000 3750
-F 0 "R18" V 3793 3750 50  0000 C CNN
-F 1 "4,7k" V 3884 3750 50  0000 C CNN
-F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal" V 3930 3750 50  0001 C CNN
-F 3 "~" H 4000 3750 50  0001 C CNN
-	1    4000 3750
+P 4100 4250
+F 0 "R18" V 3893 4250 50  0000 C CNN
+F 1 "4,7k" V 3984 4250 50  0000 C CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal" V 4030 4250 50  0001 C CNN
+F 3 "~" H 4100 4250 50  0001 C CNN
+	1    4100 4250
 	0    1    1    0   
 $EndComp
-Text Label 3350 3750 0    39   ~ 0
+Text Label 3450 4250 0    39   ~ 0
 IGNITION
 Wire Wire Line
-	3350 3750 3850 3750
+	3450 4250 3950 4250
 Wire Wire Line
 	7800 2050 7800 2450
-$Comp
-L Mechanical:MountingHole_Pad H1
-U 1 1 6069FD2A
-P 9150 2550
-F 0 "H1" V 9100 2750 50  0000 C CNN
-F 1 "MountingHole_Pad" H 9600 2600 50  0000 C CNN
-F 2 "Connector_Wire:SolderWirePad_1x01_Drill0.8mm" H 9150 2550 50  0001 C CNN
-F 3 "~" H 9150 2550 50  0001 C CNN
-	1    9150 2550
-	0    -1   -1   0   
-$EndComp
 Wire Wire Line
 	6050 3750 5500 3750
 Wire Wire Line
@@ -1828,4 +1621,47 @@ Wire Wire Line
 	6050 5000 6050 5100
 Text GLabel 700  4700 0    39   Input ~ 0
 SQ3
+$Comp
+L Connector:Conn_01x01_Male J17
+U 1 1 6057652A
+P 9050 2550
+F 0 "J17" H 9100 2650 50  0000 C CNN
+F 1 "Conn_01x01_Male" V 9000 2850 50  0000 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x01_P2.54mm_Vertical" H 9050 2550 50  0001 C CNN
+F 3 "~" H 9050 2550 50  0001 C CNN
+	1    9050 2550
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	9450 2450 9500 2450
+Wire Wire Line
+	4650 1300 5300 1300
+Text GLabel 8100 3450 2    39   Input ~ 0
+EXT_PTT
+Wire Wire Line
+	8000 3450 8100 3450
+Wire Wire Line
+	8000 2050 8000 3450
+Wire Wire Line
+	8950 3250 8950 3900
+Wire Wire Line
+	8950 3900 9250 3900
+Wire Notes Line
+	3350 3250 4950 3250
+Wire Notes Line
+	3350 3600 4950 3600
+Text GLabel 800  4350 0    35   Input ~ 0
+CMD_PTT
+Wire Wire Line
+	800  4350 1150 4350
+Connection ~ 1150 4350
+Connection ~ 8950 3900
+Wire Wire Line
+	8950 3900 8950 4400
+Connection ~ 8950 4400
+Wire Wire Line
+	8950 4400 8950 5150
+Wire Wire Line
+	8950 5300 8950 5150
+Connection ~ 8950 5150
 $EndSCHEMATC

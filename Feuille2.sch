@@ -4,9 +4,9 @@ EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
 Sheet 2 2
-Title "Interface Raspberry V3 - MTM800(E) MTM5400 pour SVXLink"
-Date "20/09/2020"
-Rev "3"
+Title "Interface Raspberry V4 - MTM800(E) MTM5x00 pour SVXLink"
+Date "20/03/2021"
+Rev "4"
 Comp "F1IWQ"
 Comment1 ""
 Comment2 ""
@@ -634,14 +634,14 @@ Wire Wire Line
 $Comp
 L power:GND #PWR?
 U 1 1 605D6FDF
-P 8400 2800
+P 8400 3200
 AR Path="/605D6FDF" Ref="#PWR?"  Part="1" 
 AR Path="/5F6D3208/605D6FDF" Ref="#PWR0103"  Part="1" 
-F 0 "#PWR0103" H 8400 2550 50  0001 C CNN
-F 1 "GND" H 8405 2627 50  0000 C CNN
-F 2 "" H 8400 2800 50  0001 C CNN
-F 3 "" H 8400 2800 50  0001 C CNN
-	1    8400 2800
+F 0 "#PWR0103" H 8400 2950 50  0001 C CNN
+F 1 "GND" H 8405 3027 50  0000 C CNN
+F 2 "" H 8400 3200 50  0001 C CNN
+F 3 "" H 8400 3200 50  0001 C CNN
+	1    8400 3200
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
@@ -650,9 +650,6 @@ Wire Wire Line
 	8400 2550 8500 2550
 Wire Wire Line
 	8500 2550 8500 2500
-Connection ~ 8400 2550
-Wire Wire Line
-	8400 2550 8400 2800
 Wire Wire Line
 	9000 1750 9000 1600
 Wire Wire Line
@@ -701,11 +698,6 @@ F 3 "" H 9500 3200 50  0001 C CNN
 	1    9500 3200
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	8400 1200 8400 1900
-Connection ~ 8400 1200
-Wire Wire Line
-	8400 850  8400 1200
 $Comp
 L power:+3.3V #PWR?
 U 1 1 605D7015
@@ -724,18 +716,16 @@ Text Notes 7950 2400 0    47   ~ 0
 $Comp
 L power:GND #PWR?
 U 1 1 605D701C
-P 7800 2800
+P 7800 3200
 AR Path="/605D701C" Ref="#PWR?"  Part="1" 
 AR Path="/5F6D3208/605D701C" Ref="#PWR0109"  Part="1" 
-F 0 "#PWR0109" H 7800 2550 50  0001 C CNN
-F 1 "GND" H 7805 2627 50  0000 C CNN
-F 2 "" H 7800 2800 50  0001 C CNN
-F 3 "" H 7800 2800 50  0001 C CNN
-	1    7800 2800
+F 0 "#PWR0109" H 7800 2950 50  0001 C CNN
+F 1 "GND" H 7805 3027 50  0000 C CNN
+F 2 "" H 7800 3200 50  0001 C CNN
+F 3 "" H 7800 3200 50  0001 C CNN
+	1    7800 3200
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	7800 2800 7800 2450
 Text Notes 9250 2100 0    39   ~ 0
 3V=porteuse présente
 $Comp
@@ -807,9 +797,9 @@ $EndComp
 Wire Wire Line
 	7950 2300 8200 2300
 Wire Wire Line
-	7800 1200 8400 1200
+	7800 1550 8400 1550
 Wire Wire Line
-	7800 2150 7800 1200
+	7800 2150 7800 1550
 $Comp
 L Device:R_POT RV?
 U 1 1 605D7053
@@ -845,10 +835,220 @@ Text Notes 8950 1100 0    47   ~ 0
 circuit squelch
 Wire Wire Line
 	8100 2100 8200 2100
-Text GLabel 8000 850  0    39   Input ~ 0
+Text GLabel 7350 850  0    39   Input ~ 0
 Squelch
-Wire Wire Line
-	8000 850  8100 850 
 Text GLabel 9250 2200 2    39   Input ~ 0
 SQ3
+$Comp
+L Device:R R?
+U 1 1 605889C2
+P 7550 1100
+AR Path="/605889C2" Ref="R?"  Part="1" 
+AR Path="/5F6D3208/605889C2" Ref="R14"  Part="1" 
+F 0 "R14" H 7620 1146 50  0000 L CNN
+F 1 "100k" H 7620 1055 50  0000 L CNN
+F 2 "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P2.54mm_Vertical" V 7480 1100 50  0001 C CNN
+F 3 "~" H 7550 1100 50  0001 C CNN
+	1    7550 1100
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0114
+U 1 1 605889C8
+P 7550 1300
+F 0 "#PWR0114" H 7550 1050 50  0001 C CNN
+F 1 "GND" H 7555 1127 50  0000 C CNN
+F 2 "" H 7550 1300 50  0001 C CNN
+F 3 "" H 7550 1300 50  0001 C CNN
+	1    7550 1300
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7550 1300 7550 1250
+Wire Wire Line
+	7350 850  7550 850 
+Wire Wire Line
+	7550 950  7550 850 
+Connection ~ 7550 850 
+Wire Wire Line
+	7550 850  8100 850 
+$Comp
+L Transistor_BJT:BC548 Q?
+U 1 1 60597F87
+P 9800 4950
+AR Path="/60597F87" Ref="Q?"  Part="1" 
+AR Path="/5F6D3208/60597F87" Ref="Q1"  Part="1" 
+F 0 "Q1" H 9991 4996 50  0000 L CNN
+F 1 "BC548" H 9991 4905 50  0000 L CNN
+F 2 "Package_TO_SOT_THT:TO-92_Inline_Wide" H 10000 4875 50  0001 L CIN
+F 3 "http://www.fairchildsemi.com/ds/BC/BC547.pdf" H 9800 4950 50  0001 L CNN
+	1    9800 4950
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 60597F8E
+P 9900 5600
+AR Path="/60597F8E" Ref="#PWR?"  Part="1" 
+AR Path="/5F6D3208/60597F8E" Ref="#PWR0115"  Part="1" 
+F 0 "#PWR0115" H 9900 5350 50  0001 C CNN
+F 1 "GND" H 9905 5427 50  0000 C CNN
+F 2 "" H 9900 5600 50  0001 C CNN
+F 3 "" H 9900 5600 50  0001 C CNN
+	1    9900 5600
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R?
+U 1 1 60597F94
+P 9400 4950
+AR Path="/60597F94" Ref="R?"  Part="1" 
+AR Path="/5F6D3208/60597F94" Ref="R5"  Part="1" 
+F 0 "R5" V 9193 4950 50  0000 C CNN
+F 1 "10k" V 9284 4950 50  0000 C CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal" V 9330 4950 50  0001 C CNN
+F 3 "~" H 9400 4950 50  0001 C CNN
+	1    9400 4950
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	9550 4950 9600 4950
+$Comp
+L Device:R R?
+U 1 1 60597F9C
+P 9150 5550
+AR Path="/60597F9C" Ref="R?"  Part="1" 
+AR Path="/5F6D3208/60597F9C" Ref="R6"  Part="1" 
+F 0 "R6" V 8943 5550 50  0000 C CNN
+F 1 "330" V 9034 5550 50  0000 C CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal" V 9080 5550 50  0001 C CNN
+F 3 "~" H 9150 5550 50  0001 C CNN
+	1    9150 5550
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:LED D?
+U 1 1 60597FA2
+P 9500 5550
+AR Path="/60597FA2" Ref="D?"  Part="1" 
+AR Path="/5F6D3208/60597FA2" Ref="D2"  Part="1" 
+F 0 "D2" H 9500 5450 50  0000 C CNN
+F 1 "LED" H 9500 5300 50  0000 C CNN
+F 2 "LED_THT:LED_D3.0mm" H 9500 5550 50  0001 C CNN
+F 3 "~" H 9500 5550 50  0001 C CNN
+	1    9500 5550
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	9350 5550 9300 5550
+$Comp
+L power:GND #PWR?
+U 1 1 60597FA9
+P 9700 5600
+AR Path="/60597FA9" Ref="#PWR?"  Part="1" 
+AR Path="/5F6D3208/60597FA9" Ref="#PWR0116"  Part="1" 
+F 0 "#PWR0116" H 9700 5350 50  0001 C CNN
+F 1 "GND" H 9700 5450 50  0000 C CNN
+F 2 "" H 9700 5600 50  0001 C CNN
+F 3 "" H 9700 5600 50  0001 C CNN
+	1    9700 5600
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	9650 5550 9700 5550
+Wire Wire Line
+	9000 5550 8900 5550
+Wire Wire Line
+	8900 5550 8900 4950
+Connection ~ 8900 4950
+Wire Wire Line
+	8900 4950 9250 4950
+Wire Wire Line
+	9700 5600 9700 5550
+Text Notes 9450 5700 0    39   ~ 0
+PTT
+$Comp
+L Device:R R?
+U 1 1 60597FB8
+P 8650 5300
+AR Path="/60597FB8" Ref="R?"  Part="1" 
+AR Path="/5F6D3208/60597FB8" Ref="R15"  Part="1" 
+F 0 "R15" H 8550 5450 50  0000 C CNN
+F 1 "100k" H 8550 5150 50  0000 C CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal" V 8580 5300 50  0001 C CNN
+F 3 "~" H 8650 5300 50  0001 C CNN
+	1    8650 5300
+	-1   0    0    1   
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 60597FBE
+P 8650 5600
+AR Path="/60597FBE" Ref="#PWR?"  Part="1" 
+AR Path="/5F6D3208/60597FBE" Ref="#PWR0117"  Part="1" 
+F 0 "#PWR0117" H 8650 5350 50  0001 C CNN
+F 1 "GND" H 8650 5450 50  0000 C CNN
+F 2 "" H 8650 5600 50  0001 C CNN
+F 3 "" H 8650 5600 50  0001 C CNN
+	1    8650 5600
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8650 5600 8650 5450
+Wire Wire Line
+	8650 5150 8650 4950
+Wire Wire Line
+	8650 4950 8900 4950
+$Comp
+L Connector_Generic:Conn_01x02 J?
+U 1 1 605AA29E
+P 10100 4400
+AR Path="/605AA29E" Ref="J?"  Part="1" 
+AR Path="/5F6D3208/605AA29E" Ref="J14"  Part="1" 
+F 0 "J14" H 10050 4200 50  0000 L CNN
+F 1 "Conn_01x02" H 9450 4350 50  0000 L CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical" H 10100 4400 50  0001 C CNN
+F 3 "~" H 10100 4400 50  0001 C CNN
+	1    10100 4400
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	9900 4500 9900 4750
+Wire Wire Line
+	9900 4400 9900 4100
+Text GLabel 9750 4100 0    39   Input ~ 0
+EXT_PTT
+Wire Wire Line
+	9750 4100 9900 4100
+Text Notes 10500 4300 2    43   ~ 0
+J14 : \nsans/avec PTT
+Wire Notes Line
+	10650 3850 10650 6350
+Wire Notes Line
+	10650 6350 8250 6350
+Wire Notes Line
+	8250 6350 8250 3850
+Wire Notes Line
+	8250 3850 10650 3850
+Text Notes 8600 4250 0    47   ~ 0
+Circuit PTT
+Wire Wire Line
+	9900 5150 9900 5600
+Text Notes 7050 1050 0    35   ~ 0
+entrée squelch\n0 / 12V
+Wire Wire Line
+	7800 2450 7800 3200
+Wire Wire Line
+	8400 2550 8400 3200
+Connection ~ 8400 2550
+Connection ~ 8400 1550
+Wire Wire Line
+	8400 1550 8400 1900
+Wire Wire Line
+	8400 850  8400 1550
+Text GLabel 8600 4950 0    35   Input ~ 0
+CMD_PTT
+Wire Wire Line
+	8600 4950 8650 4950
+Connection ~ 8650 4950
 $EndSCHEMATC
