@@ -60,7 +60,7 @@ L Connector_Generic:Conn_02x10_Odd_Even J3
 U 1 1 5EECBC9C
 P 8200 1850
 F 0 "J3" V 8300 1250 50  0000 R CNN
-F 1 "Conn_02x10_Odd_Even" V 8300 3350 50  0000 R CNN
+F 1 "Conn_02x10_Odd_Even" V 6900 2300 50  0000 R CNN
 F 2 "Connector_PinHeader_2.54mm:PinHeader_2x10_P2.54mm_Vertical" H 8200 1850 50  0001 C CNN
 F 3 "~" H 8200 1850 50  0001 C CNN
 	1    8200 1850
@@ -69,12 +69,12 @@ $EndComp
 $Comp
 L power:GND #PWR03
 U 1 1 5EECCC6C
-P 8200 3000
-F 0 "#PWR03" H 8200 2750 50  0001 C CNN
-F 1 "GND" H 8350 2950 50  0000 C CNN
-F 2 "" H 8200 3000 50  0001 C CNN
-F 3 "" H 8200 3000 50  0001 C CNN
-	1    8200 3000
+P 8200 2850
+F 0 "#PWR03" H 8200 2600 50  0001 C CNN
+F 1 "GND" H 8350 2800 50  0000 C CNN
+F 2 "" H 8200 2850 50  0001 C CNN
+F 3 "" H 8200 2850 50  0001 C CNN
+	1    8200 2850
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -82,7 +82,7 @@ L Connector:Conn_01x06_Male J2
 U 1 1 5EECE742
 P 5500 1000
 F 0 "J2" V 5550 600 50  0000 R CNN
-F 1 "Conn_01x01_Male" V 5050 1200 50  0000 R CNN
+F 1 "Conn_01x01_Male" V 5450 650 50  0000 R CNN
 F 2 "Connector_PinHeader_2.54mm:PinHeader_1x06_P2.54mm_Vertical" H 5500 1000 50  0001 C CNN
 F 3 "~" H 5500 1000 50  0001 C CNN
 	1    5500 1000
@@ -154,27 +154,27 @@ $EndComp
 $Comp
 L Device:R_POT RV1
 U 1 1 5EF1F387
-P 6700 1200
-F 0 "RV1" H 6631 1246 50  0000 R CNN
-F 1 "47k" H 6631 1155 50  0000 R CNN
-F 2 "Potentiometer_THT:Potentiometer_Bourns_3296W_Vertical" H 6700 1200 50  0001 C CNN
-F 3 "~" H 6700 1200 50  0001 C CNN
-	1    6700 1200
+P 6550 1750
+F 0 "RV1" H 6481 1796 50  0000 R CNN
+F 1 "47k" H 6481 1705 50  0000 R CNN
+F 2 "Potentiometer_THT:Potentiometer_Bourns_3296W_Vertical" H 6550 1750 50  0001 C CNN
+F 3 "~" H 6550 1750 50  0001 C CNN
+	1    6550 1750
 	1    0    0    -1  
 $EndComp
 $Comp
 L power:GND #PWR06
 U 1 1 5EF2082F
-P 6700 1500
-F 0 "#PWR06" H 6700 1250 50  0001 C CNN
-F 1 "GND" H 6705 1327 50  0000 C CNN
-F 2 "" H 6700 1500 50  0001 C CNN
-F 3 "" H 6700 1500 50  0001 C CNN
-	1    6700 1500
+P 6550 2050
+F 0 "#PWR06" H 6550 1800 50  0001 C CNN
+F 1 "GND" H 6555 1877 50  0000 C CNN
+F 2 "" H 6550 2050 50  0001 C CNN
+F 3 "" H 6550 2050 50  0001 C CNN
+	1    6550 2050
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	8400 2900 7500 2900
+	8400 2750 7500 2750
 Text Label 8400 2450 1    39   ~ 0
 RXAUDIO
 Wire Wire Line
@@ -192,11 +192,11 @@ F 3 "" H 6550 2900 50  0001 C CNN
 	1    6550 2900
 	1    0    0    -1  
 $EndComp
-Text Label 7300 1200 0    50   ~ 0
+Text Label 7450 1200 0    39   ~ 0
 EXTMICAUD
 Text Label 8100 2450 1    39   ~ 0
 TXAUDIO
-Text Notes 6400 1900 0    71   ~ 0
+Text Notes 7500 3100 0    71   ~ 0
 Connecteur MTM800E
 Text Notes 9350 900  2    59   ~ 0
 Les numéros déportés sont les numéros\nde broches sur le MTM800E/5400
@@ -206,11 +206,9 @@ Wire Wire Line
 	5300 1300 5300 1200
 Text Notes 5950 850  0    71   ~ 0
 Audio vers\nMTM
-Text Notes 6650 2900 0    71   ~ 0
+Text Notes 6650 2900 0    47   ~ 0
 Audio de MTM
 NoConn ~ 5400 1200
-Text Notes 4950 1150 2    71   ~ 0
-Squelch repris depuis\npin 8 du TDA en interne\ndu MTM800E
 NoConn ~ 8000 1550
 Text Notes 8000 2100 1    39   ~ 0
 3
@@ -255,7 +253,7 @@ SCIRXD
 Wire Wire Line
 	7900 1200 7900 1550
 Wire Wire Line
-	6700 1350 6700 1500
+	6550 1900 6550 2050
 Text Label 7800 1450 1    39   ~ 0
 SCITXD
 Text Notes 7800 1550 1    39   ~ 0
@@ -895,12 +893,12 @@ Wire Notes Line
 $Comp
 L Device:CP C8
 U 1 1 5EFD0977
-P 6500 950
-F 0 "C8" V 6350 800 50  0000 L CNN
-F 1 "1µF" V 6350 1000 50  0000 L CNN
-F 2 "Capacitor_THT:CP_Radial_D4.0mm_P2.00mm" H 6538 800 50  0001 C CNN
-F 3 "~" H 6500 950 50  0001 C CNN
-	1    6500 950 
+P 6350 1500
+F 0 "C8" V 6200 1350 50  0000 L CNN
+F 1 "1µF" V 6200 1550 50  0000 L CNN
+F 2 "Capacitor_THT:CP_Radial_D4.0mm_P2.00mm" H 6388 1350 50  0001 C CNN
+F 3 "~" H 6350 1500 50  0001 C CNN
+	1    6350 1500
 	0    1    1    0   
 $EndComp
 $Comp
@@ -923,7 +921,7 @@ L Connector_Generic:Conn_02x13_Odd_Even J8
 U 1 1 5F01B7A2
 P 10100 1850
 F 0 "J8" V 10104 2530 50  0000 L CNN
-F 1 "Conn_02x13_Odd_Even" V 11400 1450 50  0000 L CNN
+F 1 "Conn_02x13_Odd_Even" V 8750 1550 50  0000 L CNN
 F 2 "Connector_PinHeader_2.54mm:PinHeader_2x13_P2.54mm_Vertical" H 10100 1850 50  0001 C CNN
 F 3 "~" H 10100 1850 50  0001 C CNN
 	1    10100 1850
@@ -1017,15 +1015,13 @@ U 5F6D3208
 F0 "Feuille2" 39
 F1 "Feuille2.sch" 39
 $EndSheet
-Text GLabel 6100 950  0    39   Input ~ 0
+Text GLabel 6000 1250 2    39   Input ~ 0
 Hp_Son
 Text GLabel 6250 2300 0    39   Input ~ 0
 Mic_Son
 Text GLabel 8850 4400 0    39   Input ~ 0
 12V
 NoConn ~ 6400 7050
-Wire Wire Line
-	5700 1200 5700 1450
 Wire Wire Line
 	9250 5150 8950 5150
 Text Notes 4250 3400 0    43   ~ 0
@@ -1106,8 +1102,6 @@ F 3 "~" H 7200 900 50  0001 C CNN
 	0    -1   -1   0   
 $EndComp
 Wire Wire Line
-	7200 1200 7200 1100
-Wire Wire Line
 	7300 1200 7300 1100
 Wire Wire Line
 	7300 1200 7900 1200
@@ -1135,8 +1129,6 @@ Wire Wire Line
 Wire Wire Line
 	8700 1150 8700 1550
 NoConn ~ 4250 6550
-Text Notes 6400 950  2    39   ~ 0
--->
 Text Notes 7750 1400 3    39   ~ 0
 <--
 Text Notes 7800 2400 3    39   ~ 0
@@ -1239,11 +1231,11 @@ F 3 "http://www.vishay.com/docs/88503/1n4001.pdf" H 8950 3100 50  0001 C CNN
 	0    -1   -1   0   
 $EndComp
 Wire Wire Line
-	8200 2050 8200 3000
+	8200 2050 8200 2850
 Wire Wire Line
-	8400 2050 8400 2900
+	8400 2050 8400 2750
 Wire Wire Line
-	7500 2500 7500 2900
+	7500 2500 7500 2750
 Wire Wire Line
 	8500 2050 8500 2750
 Text Notes 4150 6850 0    39   ~ 0
@@ -1267,8 +1259,6 @@ F 3 "~" H 2250 6000 50  0001 C CNN
 	1    2250 6000
 	-1   0    0    1   
 $EndComp
-Text Notes 6100 950  0    39   ~ 0
-<--
 $Comp
 L Device:R R11
 U 1 1 5F477AA4
@@ -1367,13 +1357,9 @@ Wire Wire Line
 Wire Wire Line
 	9800 600  9800 1550
 Wire Wire Line
-	6850 1200 7200 1200
+	6500 1500 6550 1500
 Wire Wire Line
-	6650 950  6700 950 
-Wire Wire Line
-	6700 950  6700 1050
-Wire Wire Line
-	5700 1450 6250 1450
+	6550 1500 6550 1600
 Wire Wire Line
 	7500 2500 7500 2300
 Wire Wire Line
@@ -1381,14 +1367,7 @@ Wire Wire Line
 Connection ~ 7500 2500
 Text Notes 500  2500 0    43   ~ 0
 bouton arrêt pi
-Connection ~ 6250 950 
-Wire Wire Line
-	6350 950  6250 950 
-Wire Wire Line
-	6100 950  6250 950 
-Wire Wire Line
-	6250 950  6250 1450
-Text Notes 6050 1450 2    39   ~ 0
+Text Notes 6050 1500 2    39   ~ 0
 -->
 Text Notes 5600 1900 1    39   ~ 0
 -->
@@ -1445,119 +1424,109 @@ Wire Wire Line
 Wire Wire Line
 	7800 2050 7800 2450
 Wire Wire Line
-	6050 3750 5500 3750
+	6050 3800 5500 3800
 Wire Wire Line
-	6050 4050 5500 4050
+	6050 4100 5500 4100
 Wire Wire Line
-	6050 4600 5500 4600
-Wire Wire Line
-	6050 4900 5500 4900
-Text Label 5500 3750 0    39   ~ 0
+	6050 4800 5500 4800
+Text Label 5500 3800 0    39   ~ 0
 TxDPi
-Text Label 5500 4050 0    39   ~ 0
+Text Label 5500 4100 0    39   ~ 0
 TXDMax
-Text Notes 5650 3800 2    39   ~ 0
+Text Notes 5650 3850 2    39   ~ 0
 -->
-Text Notes 5650 4100 2    39   ~ 0
+Text Notes 5650 4150 2    39   ~ 0
 -->
 Wire Wire Line
-	6550 3750 6800 3750
+	6550 3800 6800 3800
 Wire Wire Line
-	6550 4050 6800 4050
+	6550 4100 6800 4100
 Wire Wire Line
-	6800 4050 6800 3750
-Connection ~ 6800 3750
+	6800 4100 6800 3800
+Connection ~ 6800 3800
 Wire Wire Line
-	6800 3750 7350 3750
-Text Label 7000 3750 0    39   ~ 0
+	6800 3800 7350 3800
+Text Label 7000 3800 0    39   ~ 0
 SCITXD
-Text Notes 7500 3750 2    39   ~ 0
+Text Notes 7500 3800 2    39   ~ 0
 -->
 Wire Wire Line
-	6550 3850 6850 3850
+	6550 3900 6850 3900
 Wire Wire Line
-	6550 4150 6850 4150
+	6550 4200 6850 4200
 Wire Wire Line
-	6850 4150 6850 3850
-Connection ~ 6850 3850
+	6850 4200 6850 3900
+Connection ~ 6850 3900
 Wire Wire Line
-	6850 3850 7350 3850
-Text Notes 7500 3850 2    39   ~ 0
+	6850 3900 7350 3900
+Text Notes 7500 3900 2    39   ~ 0
 -->
 Wire Wire Line
-	6550 3950 6900 3950
+	6550 4000 6900 4000
 Wire Wire Line
-	6900 4250 6900 3950
-Connection ~ 6900 3950
+	6900 4300 6900 4000
+Connection ~ 6900 4000
 Wire Wire Line
-	6900 3950 7350 3950
-Text Label 7000 3950 0    39   ~ 0
+	6900 4000 7350 4000
+Text Label 7000 4000 0    39   ~ 0
 UART2RXD
-Text Notes 7500 3950 2    39   ~ 0
+Text Notes 7500 4000 2    39   ~ 0
 -->
-Text Label 7000 3850 0    39   ~ 0
+Text Label 7000 3900 0    39   ~ 0
 UART1RXD
 Wire Wire Line
-	6550 4250 6900 4250
+	6550 4300 6900 4300
 Wire Wire Line
-	6550 4600 6800 4600
+	6550 4800 6800 4800
 Wire Wire Line
-	6550 4700 6850 4700
+	6550 4900 6850 4900
 Wire Wire Line
-	6550 4800 6900 4800
+	6550 5000 6900 5000
 Wire Wire Line
-	6550 4900 6800 4900
+	6550 5100 6800 5100
 Wire Wire Line
-	6800 4900 6800 4600
-Connection ~ 6800 4600
+	6800 5100 6800 4800
+Connection ~ 6800 4800
 Wire Wire Line
-	6800 4600 7350 4600
+	6800 4800 7350 4800
 Wire Wire Line
-	6550 5000 6850 5000
+	6550 5200 6850 5200
 Wire Wire Line
-	6850 5000 6850 4700
-Connection ~ 6850 4700
+	6850 5200 6850 4900
+Connection ~ 6850 4900
 Wire Wire Line
-	6850 4700 7350 4700
+	6850 4900 7350 4900
 Wire Wire Line
-	6550 5100 6900 5100
+	6550 5300 6900 5300
 Wire Wire Line
-	6900 5100 6900 4800
-Connection ~ 6900 4800
+	6900 5300 6900 5000
+Connection ~ 6900 5000
 Wire Wire Line
-	6900 4800 7350 4800
-Text Label 5500 4600 0    39   ~ 0
+	6900 5000 7350 5000
+Text Label 5500 4800 0    39   ~ 0
 RxDPi
-Text Label 5500 4900 0    39   ~ 0
+Text Label 5500 5100 0    39   ~ 0
 RXDMax
-Text Notes 5500 4650 0    39   ~ 0
+Text Notes 5500 4850 0    39   ~ 0
 <--
-Text Notes 5500 4950 0    39   ~ 0
+Text Notes 5500 5150 0    39   ~ 0
 <--
-Text Label 7000 4600 0    39   ~ 0
-SCIRXD
-Text Label 5500 4600 0    39   ~ 0
-RxDPi
-Text Notes 7350 4600 0    39   ~ 0
-<--
-Text Label 7000 4700 0    39   ~ 0
-UART1TXD
 Text Label 7000 4800 0    39   ~ 0
-UART2TXD
-Text Notes 7350 4700 0    39   ~ 0
-<--
+SCIRXD
+Text Label 5500 4800 0    39   ~ 0
+RxDPi
 Text Notes 7350 4800 0    39   ~ 0
 <--
-Wire Notes Line
-	7700 5250 5300 5250
+Text Label 7000 4900 0    39   ~ 0
+UART1TXD
+Text Label 7000 5000 0    39   ~ 0
+UART2TXD
+Text Notes 7350 4900 0    39   ~ 0
+<--
+Text Notes 7350 5000 0    39   ~ 0
+<--
 Text Notes 5850 3450 0    47   ~ 0
      Sélection des chemins des UART\nattention: 1 seul cavalier par connecteur
-Wire Notes Line
-	5300 3250 7700 3250
-Wire Notes Line
-	7700 3250 7700 5250
-Wire Notes Line
-	5300 3250 5300 5250
 $Comp
 L Device:R_POT RV2
 U 1 1 5EF21949
@@ -1573,52 +1542,6 @@ Wire Wire Line
 	6400 2700 5600 2700
 Text GLabel 4650 1300 0    39   Input ~ 0
 Squelch
-Wire Wire Line
-	6050 4050 6050 4150
-$Comp
-L Connector_Generic:Conn_02x06_Odd_Even J6
-U 1 1 60AC30ED
-P 6250 3950
-F 0 "J6" H 6300 4367 50  0000 C CNN
-F 1 "Conn_02x06_Odd_Even" H 6300 4276 50  0000 C CNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_2x06_P2.54mm_Vertical" H 6250 3950 50  0001 C CNN
-F 3 "~" H 6250 3950 50  0001 C CNN
-	1    6250 3950
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	6050 3850 6050 3950
-Connection ~ 6050 4050
-$Comp
-L Connector_Generic:Conn_02x06_Odd_Even J7
-U 1 1 60AC3683
-P 6250 4800
-F 0 "J7" H 6300 5217 50  0000 C CNN
-F 1 "Conn_02x06_Odd_Even" H 6300 5126 50  0000 C CNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_2x06_P2.54mm_Vertical" H 6250 4800 50  0001 C CNN
-F 3 "~" H 6250 4800 50  0001 C CNN
-	1    6250 4800
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	6050 4700 6050 4800
-Connection ~ 6050 4900
-Wire Wire Line
-	6050 3850 6050 3750
-Connection ~ 6050 3850
-Connection ~ 6050 3750
-Wire Wire Line
-	6050 4250 6050 4150
-Connection ~ 6050 4150
-Wire Wire Line
-	6050 4700 6050 4600
-Connection ~ 6050 4700
-Connection ~ 6050 4600
-Wire Wire Line
-	6050 4900 6050 5000
-Connection ~ 6050 5000
-Wire Wire Line
-	6050 5000 6050 5100
 Text GLabel 700  4700 0    39   Input ~ 0
 SQ3
 $Comp
@@ -1636,12 +1559,10 @@ Wire Wire Line
 	9450 2450 9500 2450
 Wire Wire Line
 	4650 1300 5300 1300
-Text GLabel 8100 3450 2    39   Input ~ 0
+Text GLabel 7900 2900 0    39   Input ~ 0
 EXT_PTT
 Wire Wire Line
-	8000 3450 8100 3450
-Wire Wire Line
-	8000 2050 8000 3450
+	8000 2050 8000 2900
 Wire Wire Line
 	8950 3250 8950 3900
 Wire Wire Line
@@ -1664,4 +1585,115 @@ Wire Wire Line
 Wire Wire Line
 	8950 5300 8950 5150
 Connection ~ 8950 5150
+Wire Wire Line
+	7900 2900 8000 2900
+Wire Wire Line
+	6200 1500 5700 1500
+Wire Wire Line
+	5700 1200 5700 1250
+Wire Wire Line
+	6000 1250 5700 1250
+Connection ~ 5700 1250
+Wire Wire Line
+	5700 1250 5700 1500
+Wire Wire Line
+	7200 1100 7200 1750
+Wire Wire Line
+	6700 1750 7200 1750
+Text Notes 7100 1750 2    39   ~ 0
+-->
+Text Notes 6650 1850 0    47   ~ 0
+Audio vers MTM
+Text Notes 5400 500  3    39   ~ 0
+entrée squelch\n  radio si il doit \n        être câblé
+Text Notes 7550 3800 0    35   ~ 0
+MTM800E 3,3V
+Text Notes 7550 3950 0    35   ~ 0
+MTM5x00 3,3V??
+Wire Notes Line
+	5300 3250 8050 3250
+Text Notes 7550 4800 0    35   ~ 0
+MTM800E 3,3V
+Text Notes 7550 4950 0    35   ~ 0
+MTM5x00 3,3V??
+Text Notes 7500 4000 2    39   ~ 0
+-->
+Text Notes 7500 3900 2    39   ~ 0
+-->
+Wire Notes Line
+	7550 4850 7550 5000
+Wire Notes Line
+	7550 3850 7550 4000
+Text Notes 750  1150 0    35   ~ 0
+3,3V
+$Comp
+L Connector_Generic:Conn_02x07_Odd_Even J6
+U 1 1 60603690
+P 6250 4000
+F 0 "J6" H 6300 4517 50  0000 C CNN
+F 1 "Conn_02x07_Odd_Even" H 6300 4426 50  0000 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_2x07_P2.54mm_Vertical" H 6250 4000 50  0001 C CNN
+F 3 "~" H 6250 4000 50  0001 C CNN
+	1    6250 4000
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6050 4000 6050 3900
+Connection ~ 6050 3800
+Wire Wire Line
+	6050 3800 6050 3700
+Connection ~ 6050 3900
+Wire Wire Line
+	6050 3900 6050 3800
+Wire Wire Line
+	6550 3700 7350 3700
+Text Label 7000 3700 0    39   ~ 0
+RXDMax
+Text Notes 7500 3700 2    39   ~ 0
+-->
+$Comp
+L Connector_Generic:Conn_02x07_Odd_Even J7
+U 1 1 606491BF
+P 6250 5000
+F 0 "J7" H 6300 5517 50  0000 C CNN
+F 1 "Conn_02x07_Odd_Even" H 6300 5426 50  0000 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_2x07_P2.54mm_Vertical" H 6250 5000 50  0001 C CNN
+F 3 "~" H 6250 5000 50  0001 C CNN
+	1    6250 5000
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6050 5100 5500 5100
+Wire Wire Line
+	6050 5000 6050 4900
+Connection ~ 6050 4800
+Wire Wire Line
+	6050 4800 6050 4700
+Connection ~ 6050 4900
+Wire Wire Line
+	6050 4900 6050 4800
+Wire Wire Line
+	6050 5300 6050 5200
+Connection ~ 6050 5100
+Connection ~ 6050 5200
+Wire Wire Line
+	6050 5200 6050 5100
+Wire Wire Line
+	6050 4300 6050 4200
+Connection ~ 6050 4100
+Connection ~ 6050 4200
+Wire Wire Line
+	6050 4200 6050 4100
+Wire Wire Line
+	6550 4700 7350 4700
+Text Label 7000 4700 0    39   ~ 0
+TXDMax
+Text Notes 7350 4700 0    39   ~ 0
+<--
+Wire Notes Line
+	5300 5450 8050 5450
+Wire Notes Line
+	5300 3250 5300 5450
+Wire Notes Line
+	8050 3250 8050 5450
 $EndSCHEMATC
