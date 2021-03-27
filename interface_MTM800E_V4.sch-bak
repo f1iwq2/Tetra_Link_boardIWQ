@@ -1401,7 +1401,7 @@ U 1 1 5F7325E5
 P 4600 4250
 F 0 "J16" H 4700 4250 50  0000 L CNN
 F 1 "Conn_01x01" H 4450 4400 50  0000 L CNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_1x01_P2.54mm_Vertical" H 4600 4250 50  0001 C CNN
+F 2 "TestPoint:TestPoint_Loop_D2.50mm_Drill1.0mm" H 4600 4250 50  0001 C CNN
 F 3 "~" H 4600 4250 50  0001 C CNN
 	1    4600 4250
 	1    0    0    -1  

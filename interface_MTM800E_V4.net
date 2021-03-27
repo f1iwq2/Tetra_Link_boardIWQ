@@ -1,7 +1,7 @@
 (export (version D)
   (design
     (source C:\Users\moua\Documents\interface_MTM800E_V4\interface_MTM800E_V4.sch)
-    (date "26/03/2021 15:29:36")
+    (date "27/03/2021 16:23:58")
     (tool "Eeschema (5.1.8)-1")
     (sheet (number 1) (name /) (tstamps /)
       (title_block
@@ -263,7 +263,7 @@
       (tstamp 5F5015F9))
     (comp (ref J16)
       (value Conn_01x01)
-      (footprint TestPoint:TestPoint_Loop_D2.50mm_Drill1.0mm)
+      (footprint Connector_PinHeader_2.54mm:PinHeader_1x01_P2.54mm_Vertical)
       (datasheet ~)
       (libsource (lib Connector_Generic) (part Conn_01x01) (description "Generic connector, single row, 01x01, script generated (kicad-library-utils/schlib/autogen/connector/)"))
       (sheetpath (names /) (tstamps /))
