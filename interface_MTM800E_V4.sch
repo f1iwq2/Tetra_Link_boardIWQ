@@ -228,7 +228,7 @@ U 1 1 5EEFF679
 P 1950 6750
 F 0 "R9" V 1850 6850 50  0000 C CNN
 F 1 "1k" V 1850 6650 50  0000 C CNN
-F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P2.54mm_Vertical" V 1880 6750 50  0001 C CNN
+F 2 "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P2.54mm_Vertical" V 1880 6750 50  0001 C CNN
 F 3 "~" H 1950 6750 50  0001 C CNN
 	1    1950 6750
 	0    1    1    0   
@@ -239,7 +239,7 @@ U 1 1 5EEFFD68
 P 1950 6350
 F 0 "R8" V 1850 6400 50  0000 L CNN
 F 1 "1k" V 1850 6200 50  0000 L CNN
-F 2 "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P2.54mm_Vertical" V 1880 6350 50  0001 C CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal" V 1880 6350 50  0001 C CNN
 F 3 "~" H 1950 6350 50  0001 C CNN
 	1    1950 6350
 	0    1    1    0   
@@ -1249,17 +1249,6 @@ Wire Wire Line
 Wire Wire Line
 	2500 6550 2650 6550
 $Comp
-L Device:R R10
-U 1 1 5F495FED
-P 2250 6000
-F 0 "R10" H 2400 6050 50  0000 C CNN
-F 1 "10k" H 2400 5950 50  0000 C CNN
-F 2 "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P2.54mm_Vertical" V 2180 6000 50  0001 C CNN
-F 3 "~" H 2250 6000 50  0001 C CNN
-	1    2250 6000
-	-1   0    0    1   
-$EndComp
-$Comp
 L Device:R R11
 U 1 1 5F477AA4
 P 1000 1300
@@ -1424,11 +1413,11 @@ Wire Wire Line
 Wire Wire Line
 	7800 2050 7800 2450
 Wire Wire Line
-	6050 3800 5500 3800
+	6050 3800 5950 3800
 Wire Wire Line
-	6050 4100 5500 4100
+	6050 4100 5950 4100
 Wire Wire Line
-	6050 4800 5500 4800
+	6050 4800 5950 4800
 Text Label 5500 3800 0    39   ~ 0
 TxDPi
 Text Label 5500 4100 0    39   ~ 0
@@ -1609,13 +1598,13 @@ entrée squelch\n  radio si il doit \n        être câblé
 Text Notes 7550 3800 0    35   ~ 0
 MTM800E 3,3V
 Text Notes 7550 3950 0    35   ~ 0
-MTM5x00 3,3V??
+MTM5x00 3,3V
 Wire Notes Line
 	5300 3250 8050 3250
 Text Notes 7550 4800 0    35   ~ 0
 MTM800E 3,3V
 Text Notes 7550 4950 0    35   ~ 0
-MTM5x00 3,3V??
+MTM5x00 3,3V
 Text Notes 7500 4000 2    39   ~ 0
 -->
 Text Notes 7500 3900 2    39   ~ 0
@@ -1638,14 +1627,6 @@ F 3 "~" H 6250 4000 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	6050 4000 6050 3900
-Connection ~ 6050 3800
-Wire Wire Line
-	6050 3800 6050 3700
-Connection ~ 6050 3900
-Wire Wire Line
-	6050 3900 6050 3800
-Wire Wire Line
 	6550 3700 7350 3700
 Text Label 7000 3700 0    39   ~ 0
 RXDMax
@@ -1663,27 +1644,7 @@ F 3 "~" H 6250 5000 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	6050 5100 5500 5100
-Wire Wire Line
-	6050 5000 6050 4900
-Connection ~ 6050 4800
-Wire Wire Line
-	6050 4800 6050 4700
-Connection ~ 6050 4900
-Wire Wire Line
-	6050 4900 6050 4800
-Wire Wire Line
-	6050 5300 6050 5200
-Connection ~ 6050 5100
-Connection ~ 6050 5200
-Wire Wire Line
-	6050 5200 6050 5100
-Wire Wire Line
-	6050 4300 6050 4200
-Connection ~ 6050 4100
-Connection ~ 6050 4200
-Wire Wire Line
-	6050 4200 6050 4100
+	6050 5100 5950 5100
 Wire Wire Line
 	6550 4700 7350 4700
 Text Label 7000 4700 0    39   ~ 0
@@ -1696,4 +1657,75 @@ Wire Notes Line
 	5300 3250 5300 5450
 Wire Notes Line
 	8050 3250 8050 5450
+Text Notes 7550 3700 0    35   ~ 0
+DB9 J5
+Text Notes 7550 4700 0    35   ~ 0
+DB9 J5
+Wire Wire Line
+	6050 4000 5950 4000
+Wire Wire Line
+	5950 4000 5950 3900
+Wire Wire Line
+	5950 3700 6050 3700
+Wire Wire Line
+	6050 3900 5950 3900
+Connection ~ 5950 3900
+Wire Wire Line
+	5950 3900 5950 3800
+Connection ~ 5950 3800
+Wire Wire Line
+	5950 3800 5500 3800
+Wire Wire Line
+	5950 3800 5950 3700
+Wire Wire Line
+	6050 5000 5950 5000
+Wire Wire Line
+	5950 5000 5950 4900
+Connection ~ 5950 4800
+Wire Wire Line
+	5950 4800 5500 4800
+Wire Wire Line
+	6050 4900 5950 4900
+Connection ~ 5950 4900
+Wire Wire Line
+	5950 4900 5950 4800
+Wire Wire Line
+	5950 4800 5950 4700
+Wire Wire Line
+	5950 4700 6050 4700
+Wire Wire Line
+	5950 5100 5950 5200
+Wire Wire Line
+	5950 5300 6050 5300
+Connection ~ 5950 5100
+Wire Wire Line
+	5950 5100 5500 5100
+Wire Wire Line
+	6050 5200 5950 5200
+Connection ~ 5950 5200
+Wire Wire Line
+	5950 5200 5950 5300
+Wire Wire Line
+	6050 4300 5950 4300
+Wire Wire Line
+	5950 4300 5950 4200
+Connection ~ 5950 4100
+Wire Wire Line
+	5950 4100 5500 4100
+Wire Wire Line
+	5950 4200 6050 4200
+Connection ~ 5950 4200
+Wire Wire Line
+	5950 4200 5950 4100
+$Comp
+L Device:R R10
+U 1 1 5F495FED
+P 2250 6000
+F 0 "R10" H 2400 6050 50  0000 C CNN
+F 1 "10k" H 2400 5950 50  0000 C CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal" V 2180 6000 50  0001 C CNN
+F 3 "~" H 2250 6000 50  0001 C CNN
+	1    2250 6000
+	-1   0    0    1   
+$EndComp
 $EndSCHEMATC
