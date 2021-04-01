@@ -64,6 +64,8 @@
     (pad_drill 2.75)
     (pad_to_mask_clearance 0.051)
     (solder_mask_min_width 0.25)
+    (pad_to_paste_clearance 0.01)
+    (pad_to_paste_clearance_ratio -0.00000001)
     (aux_axis_origin 0 0)
     (visible_elements 7FFDFFFF)
     (pcbplotparams
@@ -1576,7 +1578,7 @@
     (fp_line (start -1.6 1.6) (end 6.23 1.6) (layer F.CrtYd) (width 0.05))
     (fp_line (start 6.23 1.6) (end 6.23 -1.6) (layer F.CrtYd) (width 0.05))
     (fp_line (start 6.23 -1.6) (end -1.6 -1.6) (layer F.CrtYd) (width 0.05))
-    (fp_text user A (at -2.0955 -0.762 90) (layer F.SilkS)
+    (fp_text user A (at 3.7465 -1.27 90) (layer F.SilkS)
       (effects (font (size 1 1) (thickness 0.15)))
     )
     (fp_text user A (at 3.48 0.9 90) (layer F.Fab)

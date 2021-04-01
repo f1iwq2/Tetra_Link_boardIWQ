@@ -1,8 +1,9 @@
-# Tetra_Link_boardIWQ
- Tetra board for the Pi Svxlink-tetra
+﻿# Tetra Link board
+Tetra board for the Pi Svxlink-tetra
  Kicad Electronic Schematics & documentation
  
- Carte Tetra pour le Pi
+ (dir doc)
+Carte Svxlink Tetra pour le Pi
  Schémas Kicad & documentation
- 
+ (rep doc) 
  
