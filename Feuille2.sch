@@ -4,9 +4,9 @@ EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
 Sheet 2 2
-Title "Interface Raspberry V4 - MTM800(E) MTM5x00 pour SVXLink"
-Date "20/03/2021"
-Rev "4"
+Title "Interface Raspberry V4.1 - MTM800(E) MTM5x00 pour SVXLink"
+Date "20/01/2022"
+Rev "4.1"
 Comp "F1IWQ"
 Comment1 ""
 Comment2 ""
@@ -432,35 +432,35 @@ Bornier HP1
 $Comp
 L Amplifier_Operational:TL074 U4
 U 4 1 5F420A93
-P 4650 7050
-F 0 "U4" H 4650 7417 50  0000 C CNN
-F 1 "TL074" H 4650 7326 50  0000 C CNN
-F 2 "Package_SO:SOIC-14_3.9x8.7mm_P1.27mm" H 4600 7150 50  0001 C CNN
-F 3 "http://www.ti.com/lit/ds/symlink/tl071.pdf" H 4700 7250 50  0001 C CNN
-	4    4650 7050
+P 1400 6900
+F 0 "U4" H 1400 7267 50  0000 C CNN
+F 1 "TL074" H 1400 7176 50  0000 C CNN
+F 2 "Package_SO:SOIC-14_3.9x8.7mm_P1.27mm" H 1350 7000 50  0001 C CNN
+F 3 "http://www.ti.com/lit/ds/symlink/tl071.pdf" H 1450 7100 50  0001 C CNN
+	4    1400 6900
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	4350 7150 4200 7150
+	1100 7000 950  7000
 Wire Wire Line
-	4200 7150 4200 7250
+	950  7000 950  7100
 Wire Wire Line
-	4350 6950 4200 6950
+	1100 6800 950  6800
 Wire Wire Line
-	4200 6950 4200 7150
-Connection ~ 4200 7150
+	950  6800 950  7000
+Connection ~ 950  7000
 $Comp
 L power:GND #PWR0110
 U 1 1 5F4278DB
-P 4200 7250
-F 0 "#PWR0110" H 4200 7000 50  0001 C CNN
-F 1 "GND" H 4205 7077 50  0000 C CNN
-F 2 "" H 4200 7250 50  0001 C CNN
-F 3 "" H 4200 7250 50  0001 C CNN
-	1    4200 7250
+P 950 7100
+F 0 "#PWR0110" H 950 6850 50  0001 C CNN
+F 1 "GND" H 955 6927 50  0000 C CNN
+F 2 "" H 950 7100 50  0001 C CNN
+F 3 "" H 950 7100 50  0001 C CNN
+	1    950  7100
 	1    0    0    -1  
 $EndComp
-NoConn ~ 4950 7050
+NoConn ~ 1700 6900
 Text GLabel 5300 4350 0    39   Input ~ 0
 12V
 Wire Wire Line
@@ -518,7 +518,7 @@ P 3850 5300
 AR Path="/5F663E1D" Ref="R?"  Part="1" 
 AR Path="/5F6D3208/5F663E1D" Ref="R16"  Part="1" 
 F 0 "R16" H 3700 5400 50  0000 C CNN
-F 1 "600" H 3700 5300 50  0000 C CNN
+F 1 "680" H 3700 5300 50  0000 C CNN
 F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal" V 3780 5300 50  0001 C CNN
 F 3 "~" H 3850 5300 50  0001 C CNN
 	1    3850 5300
@@ -892,7 +892,7 @@ P 9900 5600
 AR Path="/60597F8E" Ref="#PWR?"  Part="1" 
 AR Path="/5F6D3208/60597F8E" Ref="#PWR0115"  Part="1" 
 F 0 "#PWR0115" H 9900 5350 50  0001 C CNN
-F 1 "GND" H 9905 5427 50  0000 C CNN
+F 1 "GND" H 9900 5450 50  0000 C CNN
 F 2 "" H 9900 5600 50  0001 C CNN
 F 3 "" H 9900 5600 50  0001 C CNN
 	1    9900 5600
@@ -1032,8 +1032,6 @@ Wire Notes Line
 	8250 3850 10650 3850
 Text Notes 8600 4250 0    47   ~ 0
 Circuit PTT
-Wire Wire Line
-	9900 5150 9900 5600
 Text Notes 7050 1050 0    35   ~ 0
 entrée squelch\n0 / 12V
 Wire Wire Line
@@ -1051,4 +1049,6 @@ CMD_PTT
 Wire Wire Line
 	8600 4950 8650 4950
 Connection ~ 8650 4950
+Wire Wire Line
+	9900 5150 9900 5600
 $EndSCHEMATC

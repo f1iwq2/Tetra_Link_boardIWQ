@@ -4,11 +4,11 @@ EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
 Sheet 1 2
-Title "Interface Raspberry V4 - MTM800(E) MTM5x00 pour SVXLink"
-Date "20/03/2021"
-Rev "4"
+Title "Interface Raspberry V4.1 - MTM800(E) MTM5x00 pour SVXLink"
+Date "20/01/2022"
+Rev "4.1"
 Comp "F1IWQ"
-Comment1 ""
+Comment1 "V4.1: chgt C8 - C9 : 47µF / Ajout C18 / RV1 RV2 : 10k"
 Comment2 ""
 Comment3 ""
 Comment4 ""
@@ -156,7 +156,7 @@ L Device:R_POT RV1
 U 1 1 5EF1F387
 P 6550 1750
 F 0 "RV1" H 6481 1796 50  0000 R CNN
-F 1 "47k" H 6481 1705 50  0000 R CNN
+F 1 "1k" H 6481 1705 50  0000 R CNN
 F 2 "Potentiometer_THT:Potentiometer_Bourns_3296W_Vertical" H 6550 1750 50  0001 C CNN
 F 3 "~" H 6550 1750 50  0001 C CNN
 	1    6550 1750
@@ -775,7 +775,6 @@ Wire Wire Line
 Connection ~ 2100 3600
 Wire Wire Line
 	2100 3600 2400 3600
-NoConn ~ 1700 3500
 NoConn ~ 1900 3500
 NoConn ~ 2000 3500
 NoConn ~ 2200 3500
@@ -894,19 +893,19 @@ $Comp
 L Device:CP C8
 U 1 1 5EFD0977
 P 6350 1500
-F 0 "C8" V 6200 1350 50  0000 L CNN
-F 1 "1µF" V 6200 1550 50  0000 L CNN
+F 0 "C8" V 6550 1350 50  0000 L CNN
+F 1 "47µF" V 6450 1250 50  0000 L CNN
 F 2 "Capacitor_THT:CP_Radial_D4.0mm_P2.00mm" H 6388 1350 50  0001 C CNN
 F 3 "~" H 6350 1500 50  0001 C CNN
 	1    6350 1500
-	0    1    1    0   
+	0    -1   -1   0   
 $EndComp
 $Comp
 L Device:CP C9
 U 1 1 5EFD6347
 P 7100 2500
 F 0 "C9" V 7250 2550 50  0000 L CNN
-F 1 "1µF" V 7250 2350 50  0000 L CNN
+F 1 "47µF" V 7250 2350 50  0000 L CNN
 F 2 "Capacitor_THT:CP_Radial_D4.0mm_P2.00mm" H 7138 2350 50  0001 C CNN
 F 3 "~" H 7100 2500 50  0001 C CNN
 	1    7100 2500
@@ -1521,14 +1520,14 @@ L Device:R_POT RV2
 U 1 1 5EF21949
 P 6550 2700
 F 0 "RV2" H 6480 2654 50  0000 R CNN
-F 1 "47k" H 6480 2745 50  0000 R CNN
+F 1 "1k" H 6480 2745 50  0000 R CNN
 F 2 "Potentiometer_THT:Potentiometer_Bourns_3296W_Vertical" H 6550 2700 50  0001 C CNN
 F 3 "~" H 6550 2700 50  0001 C CNN
 	1    6550 2700
 	-1   0    0    1   
 $EndComp
 Wire Wire Line
-	6400 2700 5600 2700
+	6400 2700 6050 2700
 Text GLabel 4650 1300 0    39   Input ~ 0
 Squelch
 Text GLabel 700  4700 0    39   Input ~ 0
@@ -1728,4 +1727,23 @@ F 3 "~" H 2250 6000 50  0001 C CNN
 	1    2250 6000
 	-1   0    0    1   
 $EndComp
+Text Notes 7050 700  0    47   ~ 0
+cond 47µF
+Wire Wire Line
+	1800 3600 1700 3600
+Wire Wire Line
+	1700 3600 1700 3500
+$Comp
+L Device:CP C18
+U 1 1 61EC2114
+P 5900 2700
+F 0 "C18" V 6050 2750 50  0000 L CNN
+F 1 "47µF" V 6050 2550 50  0000 L CNN
+F 2 "Capacitor_THT:CP_Radial_D4.0mm_P2.00mm" H 5938 2550 50  0001 C CNN
+F 3 "~" H 5900 2700 50  0001 C CNN
+	1    5900 2700
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	5750 2700 5600 2700
 $EndSCHEMATC
