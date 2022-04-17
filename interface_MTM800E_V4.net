@@ -1,7 +1,7 @@
 (export (version D)
   (design
     (source C:\Users\moua\Documents\Kicad\interface_MTM800E_V4\interface_MTM800E_V4.sch)
-    (date "21/01/2022 18:04:48")
+    (date "17/04/2022 11:39:52")
     (tool "Eeschema (5.1.10)-1")
     (sheet (number 1) (name /) (tstamps /)
       (title_block
