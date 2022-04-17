@@ -1,9 +1,11 @@
-# Tetra_Link_boardIWQ
- Tetra board for the Pi Svxlink-tetra
- Kicad Electronic Schematics & documentation
+Tetra_Link_boardIWQ
+===================
  
- Carte Tetra pour le Pi
- Schémas Kicad & documentation
+Tetra board for the Pi Svxlink-tetra
+Kicad Electronic Schematics & documentation
  
- image::interface_MTM800E_V4.jpg[]
+Carte Tetra pour le Pi
+Schémas Kicad & documentation
+ 
+image::interface_MTM800E_V4.jpg[]
  
